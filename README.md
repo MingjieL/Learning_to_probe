@@ -1,9 +1,7 @@
 # Learning to Probe
 
 Learned routing and adaptive probing for approximate nearest-neighbor vector search.
-This release contains RAMPS router training, fixed-partition IVF retrieval,
-Probability Gain-Cost prefix queries (L2PR), positive-marginal queries (L2PR+),
-and the source for the native CPU kernels.
+This release contains RAMPS router training, fixed-partition IVF retrieval, learning to probe method (L2PR), improved L2PR (L2PR+), and the source for the native CPU kernels.
 
 **Acknowledgement.** Our method and implementation draw on the code of
 [Rotlex](https://github.com/ustcllm/rotlex). We thank its authors for making
