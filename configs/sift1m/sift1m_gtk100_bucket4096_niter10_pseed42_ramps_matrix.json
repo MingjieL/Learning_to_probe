@@ -1,0 +1,40 @@
+{
+  "format": "sift1m-experiment-matrix-v1",
+  "dataset": "Sift1M",
+  "compatibility": {
+    "dataset_name": "Sift1M",
+    "ground_truth_k": 100,
+    "bucket_count": 4096,
+    "kmeans_niter": 10,
+    "partition_build_seed": 42,
+    "loss": "ramps"
+  },
+  "workload_manifest_path": "artifacts/sift1m/sift1m_gtk100_workloads.json",
+  "partition_path": "artifacts/sift1m/sift1m_bucket4096_niter10_pseed42_fixed-partition",
+  "checkpoints": {
+    "ramps": "runs/sift1m_gtk100_bucket4096_niter10_pseed42_ramps/best"
+  },
+  "calibrations": {},
+  "policy_libraries": {},
+  "fixed_bucket_counts": [
+    1,
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100,
+    150,
+    200,
+    250
+  ],
+  "policy_library_evaluations": [],
+  "evaluations": [],
+  "loss_absolute_tolerance": 1e-12,
+  "output_path": "reports/sift1m/sift1m_gtk100_bucket4096_niter10_pseed42_ramps_matrix.json",
+  "scope": "ramps_only"
+}

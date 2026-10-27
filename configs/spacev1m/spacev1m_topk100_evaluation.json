@@ -1,0 +1,9 @@
+{
+  "dataset": "SpaceV1M",
+  "query_path": "data/spacev1m/query.10K.i8bin",
+  "ground_truth_path": "data/spacev1m/spacev-1M.test_l2.ivecs",
+  "top_k": 100,
+  "recall_ks": [10, 20, 50, 100],
+  "retrieval_batch_size": 1000,
+  "output_path": "reports/spacev1m/spacev1m_topk100_evaluation.json"
+}

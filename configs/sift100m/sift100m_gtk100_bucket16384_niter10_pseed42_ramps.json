@@ -1,0 +1,13 @@
+{
+  "dataset": "Sift100M",
+  "compatibility": {"dataset_name": "Sift100M", "ground_truth_k": 100, "bucket_count": 16384, "kmeans_niter": 10, "partition_build_seed": 42, "loss": "ramps"},
+  "workload_manifest_path": "artifacts/sift100m/sift100m_gtk100_workloads.json",
+  "partition": {"artifact_path": "artifacts/sift100m/sift100m_bucket16384_niter10_pseed42_fixed-partition", "bucket_count": 16384, "build_seed": 42, "kmeans_niter": 10},
+  "router": {"hidden_dimensions": [512, 512], "activation": "swish"},
+  "loss": "ramps", "ramps": {"rank_weight": "log"},
+  "batch_size": 4096, "training_data": {"mode": "file_backed"}, "epochs": 300,
+  "optimizer": {"name": "adam", "learning_rate": 0.001, "weight_decay": 0.0},
+  "validation": {"fixed_bucket_count": 100, "ann_recall_ks": [10, 20, 50, 100], "checkpoint_selection_recall_k": 10},
+  "early_stopping": {"patience_epochs": 10}, "seed": 42, "device": "cuda",
+  "output_dir": "runs/sift100m_gtk100_bucket16384_niter10_pseed42_ramps"
+}

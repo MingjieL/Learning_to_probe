@@ -1,0 +1,16 @@
+{
+  "format": "spacev100m-experiment-matrix-v1",
+  "dataset": "SpaceV100M",
+  "scope": "ramps_only",
+  "compatibility": {"dataset_name": "SpaceV100M", "ground_truth_k": 100, "bucket_count": 65536, "kmeans_niter": 10, "partition_build_seed": 42, "loss": "ramps"},
+  "workload_manifest_path": "artifacts/spacev100m/spacev100m_gtk100_workloads.json",
+  "partition_path": "artifacts/spacev100m/spacev100m_bucket65536_niter10_pseed42_fixed-partition",
+  "checkpoints": {"ramps": "runs/spacev100m_gtk100_bucket65536_niter10_pseed42_ramps/best"},
+  "calibrations": {},
+  "policy_libraries": {},
+  "fixed_bucket_counts": [1, 4, 8, 16, 32, 64, 100, 128, 192, 256],
+  "policy_library_evaluations": [],
+  "evaluations": [],
+  "loss_absolute_tolerance": 1e-12,
+  "output_path": "reports/spacev100m/spacev100m_gtk100_bucket65536_niter10_pseed42_ramps/spacev100m_gtk100_bucket65536_niter10_pseed42_ramps_matrix.json"
+}

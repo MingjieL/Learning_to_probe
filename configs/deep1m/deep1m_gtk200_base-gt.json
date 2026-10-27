@@ -1,0 +1,17 @@
+{
+  "dataset": "Deep1M",
+  "base_path": "data/deep1m/base.1M.fbin",
+  "format": "fbin",
+  "dimension": 96,
+  "metric": "l2",
+  "scope": "all",
+  "k": 200,
+  "save_distances": false,
+  "device": "cuda_all",
+  "gpu_ids": [],
+  "index_add_batch_size": 100000,
+  "query_batch_size": 10000,
+  "output_dtype": "int64",
+  "output_path": "artifacts/deep1m/deep1m_gtk200_base-gt",
+  "resume": true
+}

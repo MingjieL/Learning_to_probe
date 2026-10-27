@@ -1,0 +1,9 @@
+{
+  "dataset": "Sift100M",
+  "query_path": "data/sift100m/bigann_query.bvecs",
+  "ground_truth_path": "data/sift100m/sift-100M.test_l2.ivecs",
+  "top_k": 10,
+  "recall_ks": [10],
+  "retrieval_batch_size": 1000,
+  "output_path": "reports/sift100m/sift100m_topk10_evaluation.json"
+}

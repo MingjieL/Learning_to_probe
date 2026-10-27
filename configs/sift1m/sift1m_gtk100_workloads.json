@@ -1,0 +1,26 @@
+{
+  "dataset": "Sift1M",
+  "base_path": "data/sift1m/sift_base.fvecs",
+  "base_filename": "sift_base.fvecs",
+  "source": "base_set",
+  "roles": {
+    "router_train": {"count": 100000},
+    "checkpoint_validation": {"count": 10000},
+    "policy_cost_fit": {"count": 100000},
+    "policy_tuning": {"count": 100000},
+    "policy_certification": {"count": 10000}
+  },
+  "sampling": {
+    "strategy": "random_without_replacement",
+    "seed": 42
+  },
+  "ground_truth": {
+    "k": 100,
+    "metric": "l2",
+    "mode": "reuse_or_exact_selected",
+    "exclude_self_by_id": false,
+    "artifact_path": "artifacts/sift1m/sift1m_gtk200_base-gt"
+  },
+  "manifest_output_path": "artifacts/sift1m/sift1m_gtk100_workloads.json",
+  "materialized_ground_truth_output_path": "artifacts/sift1m/sift1m_gtk100_query-gt"
+}

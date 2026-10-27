@@ -1,0 +1,8 @@
+{
+  "dataset": "SpaceV100M", "base_path": "data/spacev100m/base.100M.i8bin", "base_filename": "base.100M.i8bin", "source": "query_file",
+  "query_path": "data/spacev100m/learn.10M.i8bin", "query_format": "i8bin",
+  "roles": {"router_train": {"count": 9990000}, "checkpoint_validation": {"count": 10000}, "policy_cost_fit": {"count": 100000}, "policy_tuning": {"count": 10000}, "policy_certification": {"count": 10000}},
+  "sampling": {"strategy": "router_complement_with_policy_subsets", "seed": 42},
+  "ground_truth": {"k": 100, "metric": "l2", "mode": "import_ivecs_prefix", "exclude_self_by_id": false, "source_path": "data/spacev100m/spacev-100M.train_l2.ivecs"},
+  "manifest_output_path": "artifacts/spacev100m/spacev100m_gtk100_workloads.json", "materialized_ground_truth_output_path": "artifacts/spacev100m/spacev100m_gtk100_query-gt"
+}

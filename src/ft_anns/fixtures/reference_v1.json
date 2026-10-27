@@ -1,0 +1,153 @@
+{
+  "format": "ft-anns-reference-fixture-v1",
+  "oracle": {
+    "repository": "FT_ANNS_baode_query_data_bucket",
+    "commit": "9f392f33e397d5e95ca79c8a556e1b595239409f",
+    "runtime_dependency": false,
+    "sources": [
+      "dataset.py",
+      "loss_zlpr.py",
+      "adaptive_query_eval.py",
+      "test/test_adaptive_query_eval.py"
+    ]
+  },
+  "losses": {
+    "dtype": "float64",
+    "logits": [
+      [2.0, 0.0, -1.0],
+      [0.5, 1.5, -0.5]
+    ],
+    "bucket_ids": [
+      [0, 1, 0],
+      [2, 2, 1]
+    ],
+    "multi_hot_targets": [
+      [1.0, 1.0, 0.0],
+      [0.0, 1.0, 1.0]
+    ],
+    "ramps": {
+      "list_sizes": [2.0, 4.0, 6.0],
+      "rank_weight": "log",
+      "size_normalization": {
+        "mode": "max",
+        "max_size": 6.0
+      },
+      "soft_targets": [
+        [0.8262346571285599, 0.17376534287144002, 0.0],
+        [0.0, 0.31500299363094614, 0.6849970063690538]
+      ]
+    },
+    "expected": {
+      "ce": 1.288725992000333,
+      "bce": 0.547150687577351,
+      "ramps": 1.147488341240827
+    }
+  },
+  "micro_partition": {
+    "metric": "l2",
+    "centroids": [
+      [0.0, 0.0],
+      [10.0, 0.0],
+      [20.0, 0.0],
+      [30.0, 0.0]
+    ],
+    "base_vectors": [
+      [0.0, 0.0],
+      [0.5, 0.0],
+      [10.0, 0.0],
+      [10.5, 0.0],
+      [11.0, 0.0],
+      [20.0, 0.0],
+      [30.0, 0.0],
+      [30.5, 0.0]
+    ],
+    "bucket_assignment": [0, 0, 1, 1, 1, 2, 3, 3],
+    "queries": [
+      [0.10000000149011612, 0.0],
+      [10.100000381469727, 0.0],
+      [29.899999618530273, 0.0]
+    ],
+    "fixed_search": {
+      "top_m": 2,
+      "top_k": 3,
+      "probe_buckets": [
+        [0, 1],
+        [1, 0],
+        [3, 2]
+      ],
+      "neighbor_ids": [
+        [0, 1, 2],
+        [2, 3, 4],
+        [6, 7, 5]
+      ],
+      "squared_l2_distances": [
+        [0.010000000707805157, 0.1600000113248825, 98.00999450683594],
+        [0.0100000761449337, 0.15999969840049744, 0.8099992871284485],
+        [0.0100000761449337, 0.36000046133995056, 98.00999450683594]
+      ],
+      "ndis": [5, 5, 3]
+    }
+  },
+  "ramps_policy": {
+    "decoder": "ramps_size_matched",
+    "list_sizes": [1, 4, 9],
+    "size_transform": {
+      "mode": "anchored_power",
+      "alpha": 0.5,
+      "anchor": 4.666666666666667
+    },
+    "effective_sizes": [
+      2.160246899469287,
+      4.320493798938574,
+      6.48074069840786
+    ],
+    "probabilities": [
+      [0.2, 0.3, 0.5],
+      [0.6, 0.3, 0.1]
+    ],
+    "ranking": [
+      [0, 2, 1],
+      [0, 1, 2]
+    ],
+    "cumulative_mass": [
+      [0.08695652173913043, 0.7391304347826086, 1.0],
+      [0.4, 0.8, 1.0]
+    ],
+    "cumulative_ndis": [
+      [1, 10, 14],
+      [1, 5, 14]
+    ],
+    "cost_lambda": 0.03,
+    "m_min": 1,
+    "probe_counts": [3, 2]
+  },
+  "partition_snapshots": {
+    "Deep1M": {
+      "assignment_count": 1000000,
+      "bucket_count": 4096,
+      "dimension": 96,
+      "min_list_size": 4,
+      "max_list_size": 836,
+      "mean_list_size": 244.140625,
+      "nonempty_buckets": 4096
+    },
+    "Sift1M": {
+      "assignment_count": 1000000,
+      "bucket_count": 4096,
+      "dimension": 128,
+      "min_list_size": 66,
+      "max_list_size": 1257,
+      "mean_list_size": 244.140625,
+      "nonempty_buckets": 4096
+    },
+    "SpaceV1M": {
+      "assignment_count": 1000000,
+      "bucket_count": 4096,
+      "dimension": 100,
+      "min_list_size": 2,
+      "max_list_size": 3510,
+      "mean_list_size": 244.140625,
+      "nonempty_buckets": 4096
+    }
+  }
+}

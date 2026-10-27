@@ -1,0 +1,17 @@
+{
+  "dataset": "Sift1M",
+  "base_path": "data/sift1m/sift_base.fvecs",
+  "format": "fvecs",
+  "dimension": 128,
+  "metric": "l2",
+  "scope": "all",
+  "k": 200,
+  "save_distances": false,
+  "device": "cuda_all",
+  "gpu_ids": [],
+  "index_add_batch_size": 100000,
+  "query_batch_size": 10000,
+  "output_dtype": "int64",
+  "output_path": "artifacts/sift1m/sift1m_gtk200_base-gt",
+  "resume": true
+}

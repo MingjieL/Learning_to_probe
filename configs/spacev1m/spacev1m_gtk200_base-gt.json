@@ -1,0 +1,17 @@
+{
+  "dataset": "SpaceV1M",
+  "base_path": "data/spacev1m/base.1M.i8bin",
+  "format": "i8bin",
+  "dimension": 100,
+  "metric": "l2",
+  "scope": "all",
+  "k": 200,
+  "save_distances": false,
+  "device": "cuda_all",
+  "gpu_ids": [],
+  "index_add_batch_size": 100000,
+  "query_batch_size": 10000,
+  "output_dtype": "int64",
+  "output_path": "artifacts/spacev1m/spacev1m_gtk200_base-gt",
+  "resume": true
+}

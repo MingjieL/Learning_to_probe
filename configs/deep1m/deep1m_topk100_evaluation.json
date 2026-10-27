@@ -1,0 +1,9 @@
+{
+  "dataset": "Deep1M",
+  "query_path": "data/deep1m/query.public.10K.fbin",
+  "ground_truth_path": "data/deep1m/deep-1M.test_l2.ivecs",
+  "top_k": 100,
+  "recall_ks": [10, 20, 50, 100],
+  "retrieval_batch_size": 1000,
+  "output_path": "reports/deep1m/deep1m_topk100_evaluation.json"
+}
