@@ -1,0 +1,12 @@
+include README.md LICENSE THIRD_PARTY_NOTICES.md SOURCE_SNAPSHOT.json .gitignore
+recursive-include src *.py *.cpp *.h *.json
+recursive-include configs *.json
+recursive-include tools *.py *.sh
+recursive-include examples *.py
+recursive-include tests *.py
+recursive-include docs *.md
+recursive-include third_party *
+recursive-include verification *.md *.json
+global-exclude *.py[cod] *.so
+prune build
+prune dist
